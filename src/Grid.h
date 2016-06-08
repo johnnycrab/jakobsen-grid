@@ -53,6 +53,7 @@ public:
     
     int getWidth() { return width; }
     int getHeight() { return height; }
+    float getPointDistance() { return pointDistance; }
 };
 
 #endif /* defined(__jakobsen_grid__Grid__) */

@@ -19,6 +19,7 @@ protected:
     Grid* grid;
     int gridWidth;
     int gridHeight;
+    float gridPointDistance;
 public:
     ofxToggle toggle;
     
@@ -29,6 +30,7 @@ public:
         grid = _grid;
         gridWidth = grid->getWidth();
         gridHeight = grid->getHeight();
+        gridPointDistance = grid->getPointDistance();
     }
     
     virtual void setup() {};

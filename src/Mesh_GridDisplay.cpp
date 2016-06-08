@@ -21,6 +21,7 @@ void Mesh_GridDisplay::setup() {
             PointMass p = grid->pointMassAt(i, j);
             
             // set the vertex on the mesh
+            mesh.addColor(ofFloatColor(1.0, 1.0, 1.0));
             mesh.addVertex(p.getPosition());
         }
     }
@@ -64,5 +65,6 @@ void Mesh_GridDisplay::update() {
 }
 
 void Mesh_GridDisplay::draw() {
+    ofSetColor(56,112,188);
     mesh.draw();
 }

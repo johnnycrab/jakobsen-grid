@@ -5,6 +5,7 @@
 #include "ofxGui.h"
 #include "GridDisplay.h"
 #include "Mesh_GridDisplay.h"
+#include "Circles_GridDisplay.h"
 
 class ofApp : public ofBaseApp{
 
@@ -71,4 +72,7 @@ class ofApp : public ofBaseApp{
     
         // grid displays
         Mesh_GridDisplay meshDisplay;
+        Circles_GridDisplay circlesDisplay;
+    
+        
 };

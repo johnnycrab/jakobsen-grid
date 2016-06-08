@@ -14,8 +14,10 @@ void ofApp::setup(){
     
     // REGISTER GRID DISPLAYS HERE!
     meshDisplay = Mesh_GridDisplay();
+    circlesDisplay = Circles_GridDisplay();
+    
     registerGridDisplay(&meshDisplay, "mesh");
-
+    registerGridDisplay(&circlesDisplay, "circles");
     // ---
     setupShape();
 }
