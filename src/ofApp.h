@@ -74,5 +74,5 @@ class ofApp : public ofBaseApp{
         Mesh_GridDisplay meshDisplay;
         Circles_GridDisplay circlesDisplay;
     
-        
+        ofImage img;
 };

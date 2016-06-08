@@ -20,6 +20,7 @@ void ofApp::setup(){
     registerGridDisplay(&circlesDisplay, "circles");
     // ---
     setupShape();
+    
 }
 
 //--------------------------------------------------------------
@@ -34,6 +35,7 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     ofBackgroundGradient(ofColor::gray, ofColor::white);
+    ofClear(0,0,0,255);
     ofEnableDepthTest();
     
     cam.begin();
@@ -165,7 +167,10 @@ void ofApp::setupShape() {
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-
+    if(key == 'x'){
+        img.grabScreen(0, 0 , ofGetWidth(), ofGetHeight());
+        img.save("screenshot.png");
+    }
 }
 
 //--------------------------------------------------------------
