@@ -23,10 +23,6 @@ private:
     
     vector<PointMass> pointMasses; // list of point masses
     
-    ofMesh mesh; // have also a mesh representation. useful for whatever
-    
-    void updateMesh();
-    
     // get a point mass at a specified position in the grid (i.e. row y, column x). Row/column numbers start with 0.
     PointMass* getPointMassAt(int x, int y) {
         return &pointMasses.at(y * width + x);
@@ -38,7 +34,6 @@ public:
     
     // DRAW FLAGS
     bool drawDebug = false;
-    bool drawMesh = true;
     
     void debugDrawPoints();
     
@@ -50,6 +45,14 @@ public:
     
     // moves the point mass at the specified position by adding the moveVec
     void movePointMass(int atX, int atY, ofVec3f moveVec);
+    
+    // return copy for draw functions
+    PointMass pointMassAt(int x, int y) {
+        return pointMasses.at(y * width + x);
+    }
+    
+    int getWidth() { return width; }
+    int getHeight() { return height; }
 };
 
 #endif /* defined(__jakobsen_grid__Grid__) */

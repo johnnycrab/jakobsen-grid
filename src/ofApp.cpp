@@ -6,19 +6,27 @@ void ofApp::setup(){
 
     ofSetVerticalSync(true);
     
-    setupShape();
-    
     ofVec3f camTarget;
     camTarget.set(ofGetWidth()/2, ofGetHeight()/2, 0);
     cam.setTarget(camTarget);
 
     setupGUI();
     
+    // REGISTER GRID DISPLAYS HERE!
+    meshDisplay = Mesh_GridDisplay();
+    registerGridDisplay(&meshDisplay, "mesh");
+
+    // ---
+    setupShape();
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
     grid.update();
+    
+    for (int i=0; i<gridDisplays.size();i++) {
+        gridDisplays.at(i)->update();
+    }
 }
 
 //--------------------------------------------------------------
@@ -34,11 +42,23 @@ void ofApp::draw(){
     grid.draw();
     
     ofPopMatrix();
+    
+    for (int i=0; i<gridDisplays.size();i++) {
+        if (gridDisplays.at(i)->toggle) {
+            gridDisplays.at(i)->draw();
+        }
+    }
 
     cam.end();
     ofDisableDepthTest();
     
     gui.draw();
+}
+
+// Register a grid display
+void ofApp::registerGridDisplay(GridDisplay* display, string name) {
+    gridDisplays.push_back(display);
+    gui.add(display->toggle.setup("Show " + name, false));
 }
 
 // --------- GUI stuff
@@ -99,6 +119,12 @@ void ofApp::randomZOffsetChanged(float &_offset) {
 
 void ofApp::setupShape() {
     grid = Grid(gridWidth, gridHeight, pointDistance, numOfResolveIterations);
+    
+    for (int i=0; i<gridDisplays.size(); i++) {
+        gridDisplays.at(i)->setGrid(&grid);
+        meshDisplay.setup();
+        gridDisplays.at(i)->setup();
+    }
     
     vector <int> usedIndices;
     

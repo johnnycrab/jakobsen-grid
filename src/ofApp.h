@@ -3,6 +3,8 @@
 #include "ofMain.h"
 #include "Grid.h"
 #include "ofxGui.h"
+#include "GridDisplay.h"
+#include "Mesh_GridDisplay.h"
 
 class ofApp : public ofBaseApp{
 
@@ -52,7 +54,6 @@ class ofApp : public ofBaseApp{
         void randomYOffsetChanged(float &_offset);
         void randomZOffsetChanged(float &_offset);
     
-    
         ofxIntSlider    gui_gridWidth;
         ofxIntSlider    gui_gridHeight;
         ofxIntSlider    gui_numOfPointsToMove;
@@ -62,4 +63,12 @@ class ofApp : public ofBaseApp{
         ofxFloatSlider  gui_randomZOffset;
     
         ofxPanel gui;
+    
+        // list for grid displays
+        vector<GridDisplay*> gridDisplays;
+    
+        void registerGridDisplay(GridDisplay* display, string name);
+    
+        // grid displays
+        Mesh_GridDisplay meshDisplay;
 };

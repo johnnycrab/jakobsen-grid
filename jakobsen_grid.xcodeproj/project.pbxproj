@@ -12,6 +12,8 @@
 		5CBB2AB3A60F65431D7B555D /* ofxButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C88333E71C9457E441C33474 /* ofxButton.cpp */; };
 		837220E80EB56CD44AD27F2A /* ofxSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15F2C6477A769C03A56D1401 /* ofxSlider.cpp */; };
 		856AA354D08AB4B323081444 /* ofxBaseGui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9604B925D32EE39065747725 /* ofxBaseGui.cpp */; };
+		B201904E1D0858C9000B885C /* GridDisplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B201904C1D0858C9000B885C /* GridDisplay.cpp */; };
+		B20190521D085DD7000B885C /* Mesh_GridDisplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B20190501D085DD7000B885C /* Mesh_GridDisplay.cpp */; };
 		B219A91C1D04CB21008C3D2A /* Grid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B219A91A1D04CB21008C3D2A /* Grid.cpp */; };
 		B219A91F1D04CCB4008C3D2A /* PointMass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B219A91D1D04CCB4008C3D2A /* PointMass.cpp */; };
 		B266578FC55D23BFEBC042E7 /* ofxGuiGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ECF8674C7975F1063C5E30CA /* ofxGuiGroup.cpp */; };
@@ -64,6 +66,10 @@
 		89449E3044D456F7DE7BEA14 /* ofxPanel.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxPanel.h; path = ../../../addons/ofxGui/src/ofxPanel.h; sourceTree = SOURCE_ROOT; };
 		907C5B5E104864A2D3A25745 /* ofxToggle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxToggle.cpp; path = ../../../addons/ofxGui/src/ofxToggle.cpp; sourceTree = SOURCE_ROOT; };
 		9604B925D32EE39065747725 /* ofxBaseGui.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxBaseGui.cpp; path = ../../../addons/ofxGui/src/ofxBaseGui.cpp; sourceTree = SOURCE_ROOT; };
+		B201904C1D0858C9000B885C /* GridDisplay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GridDisplay.cpp; sourceTree = "<group>"; };
+		B201904D1D0858C9000B885C /* GridDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridDisplay.h; sourceTree = "<group>"; };
+		B20190501D085DD7000B885C /* Mesh_GridDisplay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mesh_GridDisplay.cpp; sourceTree = "<group>"; };
+		B20190511D085DD7000B885C /* Mesh_GridDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mesh_GridDisplay.h; sourceTree = "<group>"; };
 		B219A91A1D04CB21008C3D2A /* Grid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Grid.cpp; sourceTree = "<group>"; };
 		B219A91B1D04CB21008C3D2A /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
 		B219A91D1D04CCB4008C3D2A /* PointMass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PointMass.cpp; sourceTree = "<group>"; };
@@ -173,6 +179,10 @@
 				B219A91B1D04CB21008C3D2A /* Grid.h */,
 				B219A91D1D04CCB4008C3D2A /* PointMass.cpp */,
 				B219A91E1D04CCB4008C3D2A /* PointMass.h */,
+				B201904C1D0858C9000B885C /* GridDisplay.cpp */,
+				B201904D1D0858C9000B885C /* GridDisplay.h */,
+				B20190501D085DD7000B885C /* Mesh_GridDisplay.cpp */,
+				B20190511D085DD7000B885C /* Mesh_GridDisplay.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -274,9 +284,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				B20190521D085DD7000B885C /* Mesh_GridDisplay.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
 				856AA354D08AB4B323081444 /* ofxBaseGui.cpp in Sources */,
 				5CBB2AB3A60F65431D7B555D /* ofxButton.cpp in Sources */,
+				B201904E1D0858C9000B885C /* GridDisplay.cpp in Sources */,
 				B266578FC55D23BFEBC042E7 /* ofxGuiGroup.cpp in Sources */,
 				483908258D00B98B4BE69F07 /* ofxLabel.cpp in Sources */,
 				F285EB3169F1566CA3D93C20 /* ofxPanel.cpp in Sources */,
