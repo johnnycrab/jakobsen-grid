@@ -15,9 +15,11 @@ void ofApp::setup(){
     // REGISTER GRID DISPLAYS HERE!
     meshDisplay = Mesh_GridDisplay();
     circlesDisplay = Circles_GridDisplay();
+    triangleDisplay = Triangle_GridDisplay();
     
     registerGridDisplay(&meshDisplay, "mesh");
     registerGridDisplay(&circlesDisplay, "circles");
+    registerGridDisplay(&triangleDisplay, "triangles");
     // ---
     setupShape();
     
@@ -35,7 +37,7 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     ofBackgroundGradient(ofColor::gray, ofColor::white);
-    ofClear(0,0,0,255);
+    ofEnableAlphaBlending();
     ofEnableDepthTest();
     
     cam.begin();

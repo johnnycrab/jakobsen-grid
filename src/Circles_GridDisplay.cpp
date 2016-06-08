@@ -15,8 +15,10 @@ void Circles_GridDisplay::update() {
 }
 
 void Circles_GridDisplay::draw() {
+    ofClear(0,0,0,255);
     ofSetColor(56,112,188);
     ofFill();
+    
     float radius = gridPointDistance / 4;
     
     for (int i=0; i<gridWidth; i++) {
