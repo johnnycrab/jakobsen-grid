@@ -13,9 +13,6 @@ void ofApp::setup(){
     setupGUI();
     
     // REGISTER GRID DISPLAYS HERE!
-    meshDisplay = Mesh_GridDisplay();
-    circlesDisplay = Circles_GridDisplay();
-    triangleDisplay = Triangle_GridDisplay();
     
     registerGridDisplay(&meshDisplay, "mesh");
     registerGridDisplay(&circlesDisplay, "circles");
