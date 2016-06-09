@@ -17,6 +17,7 @@ void ofApp::setup(){
     registerGridDisplay(&meshDisplay, "mesh");
     registerGridDisplay(&circlesDisplay, "circles");
     registerGridDisplay(&triangleDisplay, "triangles");
+    registerGridDisplay(&simpleLinesDisplay, "simple lines");
     // ---
     setupShape();
     

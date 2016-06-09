@@ -7,6 +7,7 @@
 #include "Mesh_GridDisplay.h"
 #include "Circles_GridDisplay.h"
 #include "Triangle_GridDisplay.h"
+#include "SimpleLines_GridDisplay.h"
 
 class ofApp : public ofBaseApp{
 
@@ -75,6 +76,7 @@ class ofApp : public ofBaseApp{
         Mesh_GridDisplay meshDisplay;
         Circles_GridDisplay circlesDisplay;
         Triangle_GridDisplay triangleDisplay;
+        SimpleLines_GridDisplay simpleLinesDisplay;
     
         ofImage img;
 };

@@ -9,6 +9,7 @@ One has the possibility to simply draw own versions of the current state of the 
 ![screen1](https://raw.githubusercontent.com/johnnycrab/jakobsen-grid/master/screen1.png)
 ![screen2](https://raw.githubusercontent.com/johnnycrab/jakobsen-grid/master/screen2.png)
 ![screen3](https://raw.githubusercontent.com/johnnycrab/jakobsen-grid/master/screen3.png)
+![screen4](https://raw.githubusercontent.com/johnnycrab/jakobsen-grid/master/screen4.png)
 
 ---
 
