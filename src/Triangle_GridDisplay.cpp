@@ -16,7 +16,7 @@ void Triangle_GridDisplay::setup() {
     yVals.clear();
     
     // get the points we want to track
-    int numOfRandomPoints = floor(gridWidth * gridHeight * 0.25);
+    int numOfRandomPoints = floor(gridWidth * gridHeight);
     
     for (int i=0; i<numOfRandomPoints; i++) {
         // get a random point
