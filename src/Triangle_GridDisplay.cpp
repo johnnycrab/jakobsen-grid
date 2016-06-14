@@ -44,7 +44,6 @@ void Triangle_GridDisplay::update() {
 
 void Triangle_GridDisplay::draw() {
     ofClear(255,255,255,255);
-    ofSetColor(0,0,0,100);
     ofFill();
     
     for (int i=0,s=xVals.size(); i<s; i++) {
@@ -52,7 +51,7 @@ void Triangle_GridDisplay::draw() {
             PointMass p1 = grid->pointMassAt(xVals.at(i), yVals.at(i));
             PointMass p2 = grid->pointMassAt(xVals.at(i+1), yVals.at(i+1));
             PointMass p3 = grid->pointMassAt(xVals.at(i+2), yVals.at(i+2));
-            
+            ofSetColor(ofRandom(0,255),ofRandom(0,255),ofRandom(0,255),100);
             ofDrawTriangle(p1.getPosition(), p2.getPosition(), p3.getPosition());
         }
     }

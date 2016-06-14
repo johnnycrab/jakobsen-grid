@@ -8,6 +8,8 @@
 #include "Circles_GridDisplay.h"
 #include "Triangle_GridDisplay.h"
 #include "SimpleLines_GridDisplay.h"
+#include "Square_GridDisplay.h"
+#include "RawGrid_GridDisplay.h"
 
 class ofApp : public ofBaseApp{
 
@@ -67,6 +69,8 @@ class ofApp : public ofBaseApp{
     
         ofxPanel gui;
     
+        bool doDrawGui = true;
+    
         // list for grid displays
         vector<GridDisplay*> gridDisplays;
     
@@ -77,6 +81,8 @@ class ofApp : public ofBaseApp{
         Circles_GridDisplay circlesDisplay;
         Triangle_GridDisplay triangleDisplay;
         SimpleLines_GridDisplay simpleLinesDisplay;
+        Square_GridDisplay squareDisplay;
+        RawGrid_GridDisplay rawDisplay;
     
         ofImage img;
 };

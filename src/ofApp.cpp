@@ -18,6 +18,8 @@ void ofApp::setup(){
     registerGridDisplay(&circlesDisplay, "circles");
     registerGridDisplay(&triangleDisplay, "triangles");
     registerGridDisplay(&simpleLinesDisplay, "simple lines");
+    registerGridDisplay(&squareDisplay, "simple squares");
+    registerGridDisplay(&rawDisplay, "raw lines");
     // ---
     setupShape();
     
@@ -36,27 +38,28 @@ void ofApp::update(){
 void ofApp::draw(){
     ofBackgroundGradient(ofColor::gray, ofColor::white);
     ofEnableAlphaBlending();
-    ofEnableDepthTest();
+//    ofEnableDepthTest();
     
-    cam.begin();
+//    cam.begin();
     
     ofPushMatrix();
     ofTranslate(ofGetWidth()/2, ofGetHeight()/2, 0);
     
     grid.draw();
-    
-    ofPopMatrix();
-    
     for (int i=0; i<gridDisplays.size();i++) {
         if (gridDisplays.at(i)->toggle) {
             gridDisplays.at(i)->draw();
         }
     }
+    
+    ofPopMatrix();
 
-    cam.end();
+  //  cam.end();
     ofDisableDepthTest();
     
-    gui.draw();
+    if (doDrawGui) {
+        gui.draw();
+    }
 }
 
 // Register a grid display
@@ -80,7 +83,7 @@ void ofApp::setupGUI() {
     gui.add(gui_gridWidth.setup("Num of rows", gridWidth, 1, 100));
     gui.add(gui_gridHeight.setup("Num of columns", gridHeight, 1, 100));
     gui.add(gui_pointDistance.setup("Point spacing", pointDistance, 1, 200));
-    gui.add(gui_numOfPointsToMove.setup("Num of points to move", numOfPointsToMove, 1, gridWidth * gridHeight));
+    gui.add(gui_numOfPointsToMove.setup("Num of points to move", numOfPointsToMove, 0, gridWidth * gridHeight));
     gui.add(gui_randomXOffset.setup("Max x offset", randomXOffset, 1, 10000));
     gui.add(gui_randomYOffset.setup("Max y offset", randomYOffset, 1, 10000));
     gui.add(gui_randomZOffset.setup("Max z offset", randomZOffset, 1, 10000));
@@ -175,7 +178,10 @@ void ofApp::keyPressed(int key){
 
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key){
-
+    // "h"
+    if (key == 104) {
+        doDrawGui = !doDrawGui;
+    }
 }
 
 //--------------------------------------------------------------

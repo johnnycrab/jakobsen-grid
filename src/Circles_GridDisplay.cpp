@@ -15,7 +15,7 @@ void Circles_GridDisplay::update() {
 }
 
 void Circles_GridDisplay::draw() {
-    ofClear(0,0,0,255);
+    ofClear(255,255,255,255);
     ofSetColor(56,112,188);
     ofFill();
     
