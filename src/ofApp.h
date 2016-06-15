@@ -12,6 +12,7 @@
 #include "RawGrid_GridDisplay.h"
 #include "SquareGroups_GridDisplay.h"
 #include "Rings_GridDisplay.h"
+#include "Lines_GridDisplay.h"
 
 class ofApp : public ofBaseApp{
 
@@ -87,6 +88,8 @@ class ofApp : public ofBaseApp{
         RawGrid_GridDisplay rawDisplay;
         SquareGroups_GridDisplay squareGroupsDisplay;
         Rings_GridDisplay ringDisplay;
+        Holey_GridDisplay holeyDisplay;
+        Lines_GridDisplay linesDisplay;
     
         ofImage img;
 };
