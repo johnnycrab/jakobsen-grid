@@ -19,7 +19,8 @@ void Lines_GridDisplay::draw() {
     ofSetColor(0,0,0,100);
     ofSetLineWidth(1);
     
-    ofMesh mesh;
+    //ofMesh mesh;
+    
    
     /*
     mesh.addVertex(ofVec3f(20,20));
@@ -33,19 +34,32 @@ void Lines_GridDisplay::draw() {
     */
     
     //mesh.setMode(OF_PRIMITIVE_TRIANGLE_FAN);
+    /*primitive.getMesh().addVertex(ofVec3f(20,20));
+    primitive.getMesh().addVertex(ofVec3f(40,20));
+    primitive.getMesh().addVertex(ofVec3f(40,40));
+    primitive.getMesh().addVertex(ofVec3f(20,40));
+    primitive.getMesh().setMode(OF_PRIMITIVE_TRIANGLE_FAN);
+
+    primitive.draw();*/
     
     for (int i=0; i<gridWidth - 1; i++) {
         ofMesh mesh;
         ofPath path;
+        of3dPrimitive primitive;
         
         int j=-1;
-        while (++j<gridHeight) {
+        while (++j<gridHeight - 1) {
             PointMass p1 = grid->pointMassAt(i, j);
             PointMass p2 = grid->pointMassAt(i + 1, j);
+            PointMass p3 = grid->pointMassAt(i + 1, j + 1);
+            PointMass p4 = grid->pointMassAt(i, j + 1);
+            
+            //mesh.addTriangle(i * j), i + 1 + , p3.getPosition());
+            //mesh.addTriangle(p1.getPosition(), p3.getPosition(), p4.getPosition());
             
             ofVec3f p2Pos = p2.getPosition();
             
-            p2Pos.x -= 3;
+            //p2Pos.y -= 3;
             
             /*if (i == 0) {
                 path.moveTo(p1.getPosition());
@@ -59,6 +73,11 @@ void Lines_GridDisplay::draw() {
             mesh.addVertex(p2Pos); // make a new vertex
             mesh.addColor(ofFloatColor(0, 0, (i + 10) % 255));  // add a color at that vertex
             
+            primitive.getMesh().addVertex(p1.getPosition());
+            primitive.getMesh().addVertex(p2.getPosition());
+            primitive.getMesh().addVertex(p3.getPosition());
+            primitive.getMesh().addVertex(p4.getPosition());
+            
             //ofDrawLine(p1.getPosition(), p2.getPosition());
             
             /*PointMass p3 = grid->pointMassAt(i + 1, j);
@@ -69,8 +88,11 @@ void Lines_GridDisplay::draw() {
         }
         
         //mesh.setMode(OF_PRIMITIVE_TRIANGLE_FAN);
-        mesh.setupIndicesAuto();
+        //mesh.setupIndicesAuto();
 
-        mesh.draw();
+        //mesh.draw();
+        //mesh.drawWireframe();
+        primitive.getMesh().setMode(OF_PRIMITIVE_TRIANGLE_FAN);
+        primitive.draw();
     }
 }
