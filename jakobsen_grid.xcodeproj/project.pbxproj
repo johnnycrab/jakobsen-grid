@@ -21,6 +21,8 @@
 		B2572D041D10875F00127ECB /* RawGrid_GridDisplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2572D021D10875F00127ECB /* RawGrid_GridDisplay.cpp */; };
 		B266578FC55D23BFEBC042E7 /* ofxGuiGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ECF8674C7975F1063C5E30CA /* ofxGuiGroup.cpp */; };
 		B26EF2951D09C6CE003C20EC /* SimpleLines_GridDisplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B26EF2931D09C6CE003C20EC /* SimpleLines_GridDisplay.cpp */; };
+		B2AB92B41D1181AD00E5910F /* SquareGroups_GridDisplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2AB92B21D1181AD00E5910F /* SquareGroups_GridDisplay.cpp */; };
+		B2AB92B71D11AB1900E5910F /* Rings_GridDisplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2AB92B51D11AB1900E5910F /* Rings_GridDisplay.cpp */; };
 		B2D775F01D0EC824001426FA /* Square_GridDisplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2D775EE1D0EC824001426FA /* Square_GridDisplay.cpp */; };
 		B56FE57CC35806596D38118C /* ofxSliderGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 802251BAF1B35B1D67B32FD0 /* ofxSliderGroup.cpp */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
@@ -87,6 +89,10 @@
 		B2572D031D10875F00127ECB /* RawGrid_GridDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RawGrid_GridDisplay.h; sourceTree = "<group>"; };
 		B26EF2931D09C6CE003C20EC /* SimpleLines_GridDisplay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleLines_GridDisplay.cpp; sourceTree = "<group>"; };
 		B26EF2941D09C6CE003C20EC /* SimpleLines_GridDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleLines_GridDisplay.h; sourceTree = "<group>"; };
+		B2AB92B21D1181AD00E5910F /* SquareGroups_GridDisplay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SquareGroups_GridDisplay.cpp; sourceTree = "<group>"; };
+		B2AB92B31D1181AD00E5910F /* SquareGroups_GridDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareGroups_GridDisplay.h; sourceTree = "<group>"; };
+		B2AB92B51D11AB1900E5910F /* Rings_GridDisplay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rings_GridDisplay.cpp; sourceTree = "<group>"; };
+		B2AB92B61D11AB1900E5910F /* Rings_GridDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rings_GridDisplay.h; sourceTree = "<group>"; };
 		B2D775EE1D0EC824001426FA /* Square_GridDisplay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Square_GridDisplay.cpp; sourceTree = "<group>"; };
 		B2D775EF1D0EC824001426FA /* Square_GridDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Square_GridDisplay.h; sourceTree = "<group>"; };
 		B87C60311EC1FE841C1ECD89 /* ofxLabel.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxLabel.h; path = ../../../addons/ofxGui/src/ofxLabel.h; sourceTree = SOURCE_ROOT; };
@@ -208,6 +214,10 @@
 				B2D775EF1D0EC824001426FA /* Square_GridDisplay.h */,
 				B2572D021D10875F00127ECB /* RawGrid_GridDisplay.cpp */,
 				B2572D031D10875F00127ECB /* RawGrid_GridDisplay.h */,
+				B2AB92B21D1181AD00E5910F /* SquareGroups_GridDisplay.cpp */,
+				B2AB92B31D1181AD00E5910F /* SquareGroups_GridDisplay.h */,
+				B2AB92B51D11AB1900E5910F /* Rings_GridDisplay.cpp */,
+				B2AB92B61D11AB1900E5910F /* Rings_GridDisplay.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -317,12 +327,14 @@
 				5CBB2AB3A60F65431D7B555D /* ofxButton.cpp in Sources */,
 				B201904E1D0858C9000B885C /* GridDisplay.cpp in Sources */,
 				B266578FC55D23BFEBC042E7 /* ofxGuiGroup.cpp in Sources */,
+				B2AB92B41D1181AD00E5910F /* SquareGroups_GridDisplay.cpp in Sources */,
 				483908258D00B98B4BE69F07 /* ofxLabel.cpp in Sources */,
 				F285EB3169F1566CA3D93C20 /* ofxPanel.cpp in Sources */,
 				B20190551D087DA5000B885C /* Circles_GridDisplay.cpp in Sources */,
 				B20190581D088F18000B885C /* Triangle_GridDisplay.cpp in Sources */,
 				837220E80EB56CD44AD27F2A /* ofxSlider.cpp in Sources */,
 				B219A91F1D04CCB4008C3D2A /* PointMass.cpp in Sources */,
+				B2AB92B71D11AB1900E5910F /* Rings_GridDisplay.cpp in Sources */,
 				B56FE57CC35806596D38118C /* ofxSliderGroup.cpp in Sources */,
 				1CD33E884D9E3358252E82A1 /* ofxToggle.cpp in Sources */,
 				B219A91C1D04CB21008C3D2A /* Grid.cpp in Sources */,

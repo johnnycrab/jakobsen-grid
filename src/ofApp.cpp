@@ -20,6 +20,8 @@ void ofApp::setup(){
     registerGridDisplay(&simpleLinesDisplay, "simple lines");
     registerGridDisplay(&squareDisplay, "simple squares");
     registerGridDisplay(&rawDisplay, "raw lines");
+    registerGridDisplay(&squareGroupsDisplay, "square groups");
+    registerGridDisplay(&ringDisplay, "rings");
     // ---
     setupShape();
     

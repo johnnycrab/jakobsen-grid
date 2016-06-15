@@ -10,6 +10,8 @@
 #include "SimpleLines_GridDisplay.h"
 #include "Square_GridDisplay.h"
 #include "RawGrid_GridDisplay.h"
+#include "SquareGroups_GridDisplay.h"
+#include "Rings_GridDisplay.h"
 
 class ofApp : public ofBaseApp{
 
@@ -83,6 +85,8 @@ class ofApp : public ofBaseApp{
         SimpleLines_GridDisplay simpleLinesDisplay;
         Square_GridDisplay squareDisplay;
         RawGrid_GridDisplay rawDisplay;
+        SquareGroups_GridDisplay squareGroupsDisplay;
+        Rings_GridDisplay ringDisplay;
     
         ofImage img;
 };

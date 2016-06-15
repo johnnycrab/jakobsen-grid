@@ -46,7 +46,7 @@ void RawGrid_GridDisplay::draw() {
                     PointMass p2 = grid->pointMassAt(i+1, j);
                     PointMass p3 = grid->pointMassAt(i, j+1);
                     
-                    ofSetColor(246,67,113);
+                    ofSetColor(121,136,142);
                     
                     if (j%2 == 0) {
                         ofSetColor(0,0,0);
@@ -62,10 +62,10 @@ void RawGrid_GridDisplay::draw() {
                     PointMass p2 = grid->pointMassAt(i-1, j);
                     PointMass p3 = grid->pointMassAt(i, j-1);
                     
-                    ofSetColor(182,210,107);
+                    ofSetColor(38,102,126);
                     
                     if (j%2 == 0) {
-                        ofSetColor(103,212,187);
+                        ofSetColor(237,238,238);
                         
                     }
                     
