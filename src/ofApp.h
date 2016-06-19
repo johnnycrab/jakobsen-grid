@@ -72,6 +72,7 @@ class ofApp : public ofBaseApp{
         ofxPanel gui;
     
         bool doDrawGui = true;
+        bool saveSvg = false;
     
         // list for grid displays
         vector<GridDisplay*> gridDisplays;

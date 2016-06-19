@@ -44,6 +44,10 @@ void ofApp::draw(){
     
 //    cam.begin();
     
+    if (saveSvg) {
+        ofBeginSaveScreenAsSVG("output.svg");
+    }
+    
     ofPushMatrix();
     ofTranslate(ofGetWidth()/2, ofGetHeight()/2, 0);
     
@@ -57,7 +61,12 @@ void ofApp::draw(){
     ofPopMatrix();
 
   //  cam.end();
-    ofDisableDepthTest();
+  //  ofDisableDepthTest();
+    
+    if (saveSvg) {
+        saveSvg = false;
+        ofEndSaveScreenAsSVG();
+    }
     
     if (doDrawGui) {
         gui.draw();
@@ -175,6 +184,9 @@ void ofApp::keyPressed(int key){
     if(key == 'x'){
         img.grabScreen(0, 0 , ofGetWidth(), ofGetHeight());
         img.save("screenshot.png");
+    }
+    if (key == 's') {
+        saveSvg = true;
     }
 }
 
