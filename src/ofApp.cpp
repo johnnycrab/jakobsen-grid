@@ -184,7 +184,7 @@ void ofApp::setupShape() {
 void ofApp::keyPressed(int key){
     if(key == 'x'){
         img.grabScreen(0, 0 , ofGetWidth(), ofGetHeight());
-        img.save("screenshot.png");
+        img.save("screenshot-" + ofToString(time(NULL)) + ".png");
     }
     if (key == 's') {
         saveSvg = true;
