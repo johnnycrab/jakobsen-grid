@@ -16,7 +16,7 @@ void Lines_GridDisplay::update() {
 
 void Lines_GridDisplay::draw() {
     ofClear(255,255,255,255);
-    ofSetColor(0,0,0,100);
+    ofSetColor(65, 88, 99, 100);
     ofSetLineWidth(1);
     
     //ofMesh mesh;
