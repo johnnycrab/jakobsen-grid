@@ -41,9 +41,9 @@ void ofApp::update(){
 void ofApp::draw(){
     ofBackgroundGradient(ofColor::gray, ofColor::white);
     ofEnableAlphaBlending();
-//    ofEnableDepthTest();
+    ofEnableDepthTest();
     
-//    cam.begin();
+    cam.begin();
     
     if (saveSvg) {
         ofBeginSaveScreenAsSVG("output.svg");
@@ -61,8 +61,8 @@ void ofApp::draw(){
     
     ofPopMatrix();
 
-  //  cam.end();
-  //  ofDisableDepthTest();
+  cam.end();
+  ofDisableDepthTest();
     
     if (saveSvg) {
         saveSvg = false;
