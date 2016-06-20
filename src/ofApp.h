@@ -89,7 +89,7 @@ class ofApp : public ofBaseApp{
         RawGrid_GridDisplay rawDisplay;
         SquareGroups_GridDisplay squareGroupsDisplay;
         Rings_GridDisplay ringDisplay;
-        Holey_GridDisplay holeyDisplay;
+        //Holey_GridDisplay holeyDisplay;
         Lines_GridDisplay linesDisplay;
     
         ofImage img;

@@ -25,6 +25,8 @@
 		B2AB92B71D11AB1900E5910F /* Rings_GridDisplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2AB92B51D11AB1900E5910F /* Rings_GridDisplay.cpp */; };
 		B2D775F01D0EC824001426FA /* Square_GridDisplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2D775EE1D0EC824001426FA /* Square_GridDisplay.cpp */; };
 		B56FE57CC35806596D38118C /* ofxSliderGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 802251BAF1B35B1D67B32FD0 /* ofxSliderGroup.cpp */; };
+		C6E0FA591D1755F900712A0D /* Lines_GridDisplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C6E0FA571D1755F900712A0D /* Lines_GridDisplay.cpp */; };
+		C6E0FA5C1D17568600712A0D /* Holey_GridDisplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C6E0FA5A1D17568600712A0D /* Holey_GridDisplay.cpp */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
 		E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */; };
@@ -96,6 +98,10 @@
 		B2D775EE1D0EC824001426FA /* Square_GridDisplay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Square_GridDisplay.cpp; sourceTree = "<group>"; };
 		B2D775EF1D0EC824001426FA /* Square_GridDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Square_GridDisplay.h; sourceTree = "<group>"; };
 		B87C60311EC1FE841C1ECD89 /* ofxLabel.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxLabel.h; path = ../../../addons/ofxGui/src/ofxLabel.h; sourceTree = SOURCE_ROOT; };
+		C6E0FA571D1755F900712A0D /* Lines_GridDisplay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Lines_GridDisplay.cpp; sourceTree = "<group>"; };
+		C6E0FA581D1755F900712A0D /* Lines_GridDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lines_GridDisplay.h; sourceTree = "<group>"; };
+		C6E0FA5A1D17568600712A0D /* Holey_GridDisplay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Holey_GridDisplay.cpp; sourceTree = "<group>"; };
+		C6E0FA5B1D17568600712A0D /* Holey_GridDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Holey_GridDisplay.h; sourceTree = "<group>"; };
 		C70D8946940288799E82131E /* ofxSliderGroup.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxSliderGroup.h; path = ../../../addons/ofxGui/src/ofxSliderGroup.h; sourceTree = SOURCE_ROOT; };
 		C88333E71C9457E441C33474 /* ofxButton.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxButton.cpp; path = ../../../addons/ofxGui/src/ofxButton.cpp; sourceTree = SOURCE_ROOT; };
 		E112B3AEBEA2C091BF2B40AE /* ofxPanel.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxPanel.cpp; path = ../../../addons/ofxGui/src/ofxPanel.cpp; sourceTree = SOURCE_ROOT; };
@@ -193,6 +199,10 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				C6E0FA5A1D17568600712A0D /* Holey_GridDisplay.cpp */,
+				C6E0FA5B1D17568600712A0D /* Holey_GridDisplay.h */,
+				C6E0FA571D1755F900712A0D /* Lines_GridDisplay.cpp */,
+				C6E0FA581D1755F900712A0D /* Lines_GridDisplay.h */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
@@ -323,11 +333,13 @@
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				B20190521D085DD7000B885C /* Mesh_GridDisplay.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
+				C6E0FA5C1D17568600712A0D /* Holey_GridDisplay.cpp in Sources */,
 				856AA354D08AB4B323081444 /* ofxBaseGui.cpp in Sources */,
 				5CBB2AB3A60F65431D7B555D /* ofxButton.cpp in Sources */,
 				B201904E1D0858C9000B885C /* GridDisplay.cpp in Sources */,
 				B266578FC55D23BFEBC042E7 /* ofxGuiGroup.cpp in Sources */,
 				B2AB92B41D1181AD00E5910F /* SquareGroups_GridDisplay.cpp in Sources */,
+				C6E0FA591D1755F900712A0D /* Lines_GridDisplay.cpp in Sources */,
 				483908258D00B98B4BE69F07 /* ofxLabel.cpp in Sources */,
 				F285EB3169F1566CA3D93C20 /* ofxPanel.cpp in Sources */,
 				B20190551D087DA5000B885C /* Circles_GridDisplay.cpp in Sources */,
