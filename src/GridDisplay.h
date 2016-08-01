@@ -20,6 +20,8 @@ protected:
     int gridWidth;
     int gridHeight;
     float gridPointDistance;
+    ofColor fillColor;
+    
 public:
     ofxToggle toggle;
     
@@ -31,6 +33,10 @@ public:
         gridWidth = grid->getWidth();
         gridHeight = grid->getHeight();
         gridPointDistance = grid->getPointDistance();
+    }
+    
+    void setColor(ofColor _color) {
+        fillColor = _color;
     }
     
     virtual void setup() {};

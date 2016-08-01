@@ -71,6 +71,7 @@ class ofApp : public ofBaseApp{
         ofxFloatSlider  gui_randomXOffset;
         ofxFloatSlider  gui_randomYOffset;
         ofxFloatSlider  gui_randomZOffset;
+        ofxColorSlider  fillColor;
     
         ofxPanel gui;
     

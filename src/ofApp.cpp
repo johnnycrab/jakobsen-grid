@@ -34,6 +34,7 @@ void ofApp::update(){
     
     for (int i=0; i<gridDisplays.size();i++) {
         gridDisplays.at(i)->update();
+        gridDisplays.at(i)->setColor(fillColor);
     }
 }
 
@@ -92,6 +93,7 @@ void ofApp::setupGUI() {
     gui_randomXOffset.addListener(this, &ofApp::randomXOffsetChanged);
     gui_randomYOffset.addListener(this, &ofApp::randomYOffsetChanged);
     gui_randomZOffset.addListener(this, &ofApp::randomZOffsetChanged);
+    //gui_fillColor.addListener(this, &ofApp::fillColorChanged);
     
     gui.setup();
     gui.add(gui_gridWidth.setup("Num of rows", gridWidth, 1, 100));
@@ -102,6 +104,7 @@ void ofApp::setupGUI() {
     gui.add(gui_randomXOffset.setup("Max x offset", randomXOffset, 1, 10000));
     gui.add(gui_randomYOffset.setup("Max y offset", randomYOffset, 1, 10000));
     gui.add(gui_randomZOffset.setup("Max z offset", randomZOffset, 1, 10000));
+    gui.add(fillColor.setup("Grid fill color", ofColor(255,0,0), ofColor(0, 0), ofColor(255, 255)));
 }
 
 void ofApp::gridWidthChanged(int &_gridWidth) {
