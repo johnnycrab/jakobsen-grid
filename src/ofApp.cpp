@@ -40,13 +40,14 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     ofBackgroundGradient(ofColor::gray, ofColor::white);
-    ofEnableAlphaBlending();
+//    ofEnableAlphaBlending();
+    ofEnableBlendMode(OF_BLENDMODE_MULTIPLY);
     ofEnableDepthTest();
     
     cam.begin();
     
     if (saveSvg) {
-        ofBeginSaveScreenAsSVG("output.svg");
+        ofBeginSaveScreenAsSVG("output" + ofToString(time(NULL)) + ".svg");
     }
     
     ofPushMatrix();
@@ -87,6 +88,7 @@ void ofApp::setupGUI() {
     gui_gridHeight.addListener(this, &ofApp::gridHeightChanged);
     gui_pointDistance.addListener(this, &ofApp::pointDistanceChanged);
     gui_numOfPointsToMove.addListener(this, &ofApp::numOfPointsToMoveChanged);
+    gui_numOfResolveIterations.addListener(this, &ofApp::numOfResolveIterationsChanged);
     gui_randomXOffset.addListener(this, &ofApp::randomXOffsetChanged);
     gui_randomYOffset.addListener(this, &ofApp::randomYOffsetChanged);
     gui_randomZOffset.addListener(this, &ofApp::randomZOffsetChanged);
@@ -96,6 +98,7 @@ void ofApp::setupGUI() {
     gui.add(gui_gridHeight.setup("Num of columns", gridHeight, 1, 100));
     gui.add(gui_pointDistance.setup("Point spacing", pointDistance, 1, 200));
     gui.add(gui_numOfPointsToMove.setup("Num of points to move", numOfPointsToMove, 0, gridWidth * gridHeight));
+    gui.add(gui_numOfResolveIterations.setup("Num resolve iterations", numOfResolveIterations, 0, 100));
     gui.add(gui_randomXOffset.setup("Max x offset", randomXOffset, 1, 10000));
     gui.add(gui_randomYOffset.setup("Max y offset", randomYOffset, 1, 10000));
     gui.add(gui_randomZOffset.setup("Max z offset", randomZOffset, 1, 10000));
@@ -117,6 +120,10 @@ void ofApp::pointDistanceChanged(float &_pd) {
 }
 void ofApp::numOfPointsToMoveChanged(int &_num) {
     numOfPointsToMove = _num;
+    setupShape();
+}
+void ofApp::numOfResolveIterationsChanged(int &_num) {
+    numOfResolveIterations = _num;
     setupShape();
 }
 void ofApp::randomXOffsetChanged(float &_offset) {

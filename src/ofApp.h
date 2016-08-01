@@ -58,6 +58,7 @@ class ofApp : public ofBaseApp{
         void gridHeightChanged(int &_gridHeight);
         void pointDistanceChanged(float &_pd);
         void numOfPointsToMoveChanged(int &_num);
+        void numOfResolveIterationsChanged(int &_num);
         void randomXOffsetChanged(float &_offset);
         void randomYOffsetChanged(float &_offset);
         void randomZOffsetChanged(float &_offset);
@@ -65,6 +66,7 @@ class ofApp : public ofBaseApp{
         ofxIntSlider    gui_gridWidth;
         ofxIntSlider    gui_gridHeight;
         ofxIntSlider    gui_numOfPointsToMove;
+        ofxIntSlider    gui_numOfResolveIterations;
         ofxFloatSlider  gui_pointDistance;
         ofxFloatSlider  gui_randomXOffset;
         ofxFloatSlider  gui_randomYOffset;

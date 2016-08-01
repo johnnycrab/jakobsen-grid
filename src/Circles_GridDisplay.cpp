@@ -24,7 +24,7 @@ void Circles_GridDisplay::draw() {
     for (int i=0; i<gridWidth; i++) {
         for (int j=0; j<gridHeight; j++) {
             PointMass p = grid->pointMassAt(i,j);
-            ofDrawCircle(p.getPosition(), radius);
+            ofDrawSphere(p.getPosition(), radius);
         }
     }
 }

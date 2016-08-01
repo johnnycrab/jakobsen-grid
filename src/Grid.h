@@ -21,6 +21,9 @@ private:
     // the number of iterations used to resolve distances between point masses. the more, the more exact
     int numOfResolveIterations;
     
+    // keeps track of the number of iterations
+    int resolveIterationsCount;
+    
     vector<PointMass> pointMasses; // list of point masses
     
     // get a point mass at a specified position in the grid (i.e. row y, column x). Row/column numbers start with 0.

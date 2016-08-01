@@ -51,7 +51,8 @@ Grid::Grid (int _width, int _height, float _pointDistance, int _numOfResolveIter
             }
         }
     }
-
+    
+    resolveIterationsCount = 0;
 }
 
 void Grid::debugDrawPoints() {
@@ -61,7 +62,20 @@ void Grid::debugDrawPoints() {
 };
 
 void Grid::update() {
-    for (int i=0; i<numOfResolveIterations; i++) {
+    // @deprecated
+    /*for (int i=0; i<numOfResolveIterations; i++) {
+        for (int j=0; j<width; j++) {
+            for (int k=0;k<height;k++) {
+                PointMass* p = getPointMassAt(j,k);
+                p->resolveLinks();
+            }
+        }
+    }*/
+    
+    // only resolve a certain number of times
+    if (resolveIterationsCount < numOfResolveIterations) {
+        resolveIterationsCount++;
+        
         for (int j=0; j<width; j++) {
             for (int k=0;k<height;k++) {
                 PointMass* p = getPointMassAt(j,k);
